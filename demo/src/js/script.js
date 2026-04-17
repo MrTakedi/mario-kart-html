@@ -217,11 +217,11 @@ class game {
         lakitu.classList.remove("show")
     }
     static recommencer(){
-        location="https://htmlpreview.github.io/?https://github.com/Spishous/Mario-Kart-html/main/demo/race.html";
+        location="https://www.sashimi.zip/Spishous/Mario-Kart-html/main/demo/race.html";
     }
 
     static quitter(){
-        location="https://htmlpreview.github.io/?https://github.com/Spishous/Mario-Kart-html/main/demo/main.html";
+        location="https://www.sashimi.zip/Spishous/Mario-Kart-html/main/demo/main.html";
     }
 
     static pause(pause=onPause){
