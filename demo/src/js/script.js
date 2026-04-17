@@ -9,7 +9,7 @@ let devmod=true,
     TimeStartGame=Date.now(),
     listKeyPressed=[],
     onPause=false,
-    themeMusic=new Audio('./src/audio/music-map1.ogg');
+    themeMusic=new Audio('https://www.sashimi.zip/Spishous/Mario-Kart-html/main/demo/src/audio/music-map1.ogg');
     themeMusic.loop=true;
     themeMusic.volume=0.15
     mapMask.crossOrigin = "Anonymous";
@@ -22,8 +22,8 @@ mapMask.onload = () => {
     contextCanvas.drawImage(mapMask, 0, 0);
 
 }
-mapMask.src = "./src/map-1-mask.png";
-document.getElementsByTagName('map')[0].style.backgroundImage='url("./src/'+mapName+'c.png")'
+mapMask.src = "https://www.sashimi.zip/Spishous/Mario-Kart-html/main/demo/src/map-1-mask.png";
+document.getElementsByTagName('map')[0].style.backgroundImage='url("https://www.sashimi.zip/Spishous/Mario-Kart-html/main/demo/src/'+mapName+'c.png")'
 
 /*function loadSample(url) {
     return fetch(url)
@@ -103,7 +103,7 @@ document.addEventListener('keydown',function(e){
             case "e":
                 if(toggleMusic){
                     toggleMusic=0;
-                    themeMusic=new Audio('./src/audio/music-map1.ogg');
+                    themeMusic=new Audio('https://www.sashimi.zip/Spishous/Mario-Kart-html/main/demo/src/audio/music-map1.ogg');
                     //kartEngine.volume=.2
                     //kartEngine.loop=true;
                     themeMusic.play();
@@ -309,7 +309,7 @@ class map{
     static readJsonFile(fileName, callback) {
         var rawFile = new XMLHttpRequest();
         rawFile.overrideMimeType("application/json");
-        rawFile.open("GET", "./src/"+fileName+".json", true);
+        rawFile.open("GET", "https://www.sashimi.zip/Spishous/Mario-Kart-html/main/demo/src/"+fileName+".json", true);
         rawFile.onreadystatechange = function() {
             if (rawFile.readyState === 4 && rawFile.status == "200") {
                 callback(JSON.parse(rawFile.responseText));
@@ -332,10 +332,10 @@ class music {
     static listPlayer={};
     static playSound(name, volume, rate = 1) {
         if(!music.listPlayer[name]){
-            music.listPlayer[name]=new Audio('./src/audio/' + name + '.ogg');
+            music.listPlayer[name]=new Audio('https://www.sashimi.zip/Spishous/Mario-Kart-html/main/demo/src/audio/' + name + '.ogg');
         }else{
             if(music.listPlayer[name].played){
-                let audio = new Audio('./src/audio/' + name + '.ogg');
+                let audio = new Audio('https://www.sashimi.zip/Spishous/Mario-Kart-html/main/demo/src/audio/' + name + '.ogg');
                 audio.playbackRate = rate;
                 audio.volume = volume
                 audio.play();
@@ -441,7 +441,7 @@ class kart{
             this.dTime=Date.now();
             /*if(0 && !this.engineSound && firstInteract){
                 this.engineSound=1
-                loadSample('./src/audio/engine3.ogg')
+                loadSample('https://www.sashimi.zip/Spishous/Mario-Kart-html/main/demo/src/audio/engine3.ogg')
                     .then(sample => {
                         this.engineSound=playSample(sample)
                         this.engineSound.playbackRate.value = 2;
